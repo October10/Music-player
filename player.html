@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>播放器</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css'>
+         <!--使用 material-icons 只需要在 head 元素加入下面的 link 标签，然后在 HTML 中使用 <i class="material-icons">XXXXX</i> 标签即可-->
+        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+        <link rel="stylesheet" href="css/player.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="audio-control" data-set='0'>
+                <audio src="music/1.mp3" id='id-audio-player'></audio>
+            </div>
+            <div class="card player">
+                <div class="z-depth-1 close"><i class="material-icons">close</i></div>
+                <div class="image">
+                    <div class="bottom-content">
+                        <div class="repeat"><i class="material-icons circle-button">repeat</i></div>
+                        <div class="title">
+                            <h6 class="song-name"></h6><span class="artist-name"></span>
+                        </div>
+                        <div class="shuffle"><i class="material-icons random-button">shuffle</i></div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="player-controls_btn player-controls__btn_add" id="player-controls__btn_add"><i class="material-icons">add</i></div>
+                    <div class="player-controls_btn player-controls__btn_prev" id="player-controls__btn_prev"><i class="material-icons">skip_previous</i></div>
+                    <div class="player-controls_btn player-controls__btn_play"><i class="material-icons">play_arrow</i></div>
+                    <div class="player-controls_btn player-controls__btn_pause unshown"><i class="material-icons">pause</i></div>
+                    <div class="player-controls_btn player-controls__btn_next  player-controls__btn_disabled" title=""><i class="material-icons">skip_next</i></div>
+                    <div class="player-controls_btn player-controls__btn_share" title=""><i class="material-icons">share</i></div>
+                </div>
+                <div class="next-song">
+                    <div class="cover"></div>
+                    <div class="title">
+                        <span class="next-title"></span>
+                        <br /><span class="next-author"></span>
+                    </div>
+                    <div class="playlist"><i class="material-icons">queue_music</i></div>
+                </div>
+            </div>
+            <div class="audio-list unshown">
+            </div>
+        </div>
+        <script type="text/javascript" src="js/List.js"></script>
+        <script type="text/javascript" src="js/Oct10.js"></script>
+        <script type="text/javascript" src="js/player.js"></script>
+    </body>
+</html>
